@@ -23,7 +23,7 @@ Search packages on npm.
 import { searchByKeywords } from 'search-packages'
 
 (async () => {
-  const packages = await searchByKeywords('some-keyword', 'more-keywords') // ['pkg-a', 'pkg-b']
+  const packages = await searchByKeywords(['some-keyword', 'more-keywords']) // ['pkg-a', 'pkg-b']
 }())
 ```
 
