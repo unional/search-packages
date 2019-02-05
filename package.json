@@ -1,14 +1,14 @@
 {
-  "name": "find-installed-packages",
-  "description": "Find installed packages",
+  "name": "search-packages",
+  "description": "Search packages on npm",
   "version": "0.0.0-development",
-  "homepage": "https://github.com/unional/find-installed-packages",
+  "homepage": "https://github.com/unional/search-packages",
   "bugs": {
-    "url": "https://github.com/unional/find-installed-packages/issues"
+    "url": "https://github.com/unional/search-packages/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/unional/find-installed-packages.git"
+    "url": "https://github.com/unional/search-packages.git"
   },
   "license": "MIT",
   "author": {
@@ -17,8 +17,10 @@
   },
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
+  "module": "libm/index.js",
+  "jsnext:main": "libm/index.js",
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "tsc -p tsconfig.es5.json && tsc -p tsconfig.esnext.json",
     "clean": "rimraf lib",
     "dc": "npm run dependency-check",
     "dependency-check": "dependency-check . --unused --no-dev && dependency-check . --missing --no-dev",
@@ -28,14 +30,7 @@
     "watch": "jest --watch"
   },
   "devDependencies": {
-    "@types/bluebird": "^3.5.25",
-    "@types/find": "^0.2.1",
     "@unional/devpkg-node": "^1.2.3",
     "assertron": "^6.1.0"
-  },
-  "dependencies": {
-    "bluebird": "^3.5.3",
-    "find": "^0.2.9",
-    "unpartial": "^0.4.1"
   }
 }

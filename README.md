@@ -1,4 +1,4 @@
-# find-installed-packages
+# search-packages
 
 ![unstable][unstable-image]
 [![NPM version][npm-image]][npm-url]
@@ -15,15 +15,15 @@
 [![Visual Studio Code][vscode-image]][vscode-url]
 [![Wallaby.js][wallaby-image]][wallaby-url]
 
-Find installed packages.
+Search packages on npm.
 
 ## Usage
 
 ```ts
-import { findByKeyword } from 'find-installed-packages'
+import { searchByKeywords } from 'search-packages'
 
 (async () => {
-  const packages = await findByKeyord('some-keyword') // ['pkg-a', 'pkg-b']
+  const packages = await searchByKeywords('some-keyword', 'more-keywords') // ['pkg-a', 'pkg-b']
 }())
 ```
 
@@ -44,22 +44,22 @@ git push
 # create PR
 ```
 
-[circleci-image]: https://circleci.com/gh/unional/find-installed-packages/tree/master.svg?style=shield
-[circleci-url]: https://circleci.com/gh/unional/find-installed-packages/tree/master
-[codecov-image]: https://codecov.io/gh/unional/find-installed-packages/branch/master/graph/badge.svg
-[codecov-url]: https://codecov.io/gh/unional/find-installed-packages
-[coveralls-image]: https://coveralls.io/repos/github/unional/find-installed-packages/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/github/unional/find-installed-packages?branch=master
-[downloads-image]: https://img.shields.io/npm/dm/find-installed-packages.svg?style=flat
-[downloads-url]: https://npmjs.org/package/find-installed-packages
-[greenkeeper-image]: https://badges.greenkeeper.io/unional/find-installed-packages.svg
+[circleci-image]: https://circleci.com/gh/unional/search-packages/tree/master.svg?style=shield
+[circleci-url]: https://circleci.com/gh/unional/search-packages/tree/master
+[codecov-image]: https://codecov.io/gh/unional/search-packages/branch/master/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/unional/search-packages
+[coveralls-image]: https://coveralls.io/repos/github/unional/search-packages/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/unional/search-packages?branch=master
+[downloads-image]: https://img.shields.io/npm/dm/search-packages.svg?style=flat
+[downloads-url]: https://npmjs.org/package/search-packages
+[greenkeeper-image]: https://badges.greenkeeper.io/unional/search-packages.svg
 [greenkeeper-url]: https://greenkeeper.io/
-[npm-image]: https://img.shields.io/npm/v/find-installed-packages.svg?style=flat
-[npm-url]: https://npmjs.org/package/find-installed-packages
+[npm-image]: https://img.shields.io/npm/v/search-packages.svg?style=flat
+[npm-url]: https://npmjs.org/package/search-packages
 [semantic-release-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-release-url]: https://github.com/semantic-release/semantic-release
-[travis-image]: https://img.shields.io/travis/unional/find-installed-packages/master.svg?style=flat
-[travis-url]: https://travis-ci.org/unional/find-installed-packages?branch=master
+[travis-image]: https://img.shields.io/travis/unional/search-packages/master.svg?style=flat
+[travis-url]: https://travis-ci.org/unional/search-packages?branch=master
 [unstable-image]: https://img.shields.io/badge/stability-unstable-yellow.svg
 [vscode-image]: https://img.shields.io/badge/vscode-ready-green.svg
 [vscode-url]: https://code.visualstudio.com/
