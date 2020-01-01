@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "declaration": true,
     "esModuleInterop": true,
+    "inlineSourceMap": true,
     "lib": [
       "es2015"
     ],
@@ -10,7 +10,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": false,
     "removeComments": false,
-    "sourceMap": true,
     "strict": true
   },
   "include": [
