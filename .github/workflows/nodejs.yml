@@ -33,7 +33,7 @@ jobs:
       - run: yarn commitlint-circle
       - run: yarn lint
       - run: yarn build
-      - run: yarn dependency-check
+      - run: yarn depcheck
       - name: upload lib folder
         uses: actions/upload-artifact@v1
         with:
@@ -85,7 +85,7 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
       - name: codacy
         if: matrix.node-version == 12 && matrix.os == 'ubuntu-latest'
-        run: yarn codacy
+        run: cat coverage/lcov.info | codacy-coverage
         env:
           CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
   release:
