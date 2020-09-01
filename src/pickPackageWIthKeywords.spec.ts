@@ -15,3 +15,14 @@ test('returns package name if keywords match', () => {
 test('do not return package if not all keywords match', () => {
   expect(pickPackagesWithKeywords([{ name: 'pkg-x', keywords: ['x'] }], ['x', 'y'])).toEqual([])
 })
+
+test('get with fields', () => {
+  expect(pickPackagesWithKeywords(
+    [{ name: 'pkg-x', version: '1.0.0', description: 'blah', keywords: ['x'] }],
+    ['x'],
+    ['version']
+  )).toEqual([{
+    name: 'pkg-x',
+    version: '1.0.0'
+  }])
+})
