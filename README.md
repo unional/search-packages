@@ -23,6 +23,12 @@ import { searchByKeywords } from 'search-packages'
 (async () => {
   const packages = await searchByKeywords(['some-keyword', 'more-keywords']) // ['pkg-a', 'pkg-b']
 }())
+
+// get additional fields
+(async () => {
+  // [{ name: 'pkg-a', description: 'a' }, { name: 'pkg-b', description: 'b' }]
+  const packages = await searchByKeywords(['some-keyword', 'more-keywords'], ['description'])
+}())
 ```
 
 ## Contribute

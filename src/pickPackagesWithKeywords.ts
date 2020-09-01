@@ -1,5 +1,12 @@
 import { hasAllKeywords } from './hasAllKeywords';
 
-export function pickPackagesWithKeywords(packageInfos: Record<string, any>[], keywords: string[]) {
-  return packageInfos.filter(pkg => hasAllKeywords(pkg.keywords, keywords)).map(pkg => pkg.name);
+export function pickPackagesWithKeywords(packageInfos: Record<string, any>[], keywords: string[], fields?: string[]) {
+  const pkgs = packageInfos.filter(pkg => hasAllKeywords(pkg.keywords, keywords))
+  if (fields)
+    return pkgs.map(pkg => fields.reduce<Record<string, any> & { name: string }>((p, v) => {
+      p[v] = pkg[v]
+      return p
+    }, { name: pkg.name }));
+  else
+    return pkgs.map(pkg => pkg.name);
 }
