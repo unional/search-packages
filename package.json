@@ -46,7 +46,7 @@
     "codacy-coverage": "^3.4.0",
     "codecov": "^3.7.2",
     "commitlint-circle": "^1.0.0",
-    "husky": "^4.2.5",
+    "husky": "^8.0.0",
     "npm-check-updates": "^8.0.2",
     "semantic-release": "^17.1.1"
   }
