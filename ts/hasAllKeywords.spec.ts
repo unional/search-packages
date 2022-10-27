@@ -1,5 +1,5 @@
 import t from 'assert';
-import { hasAllKeywords } from './hasAllKeywords';
+import { hasAllKeywords } from './hasAllKeywords.js';
 
 test('undefined list should be false', () => {
   t.strictEqual(hasAllKeywords(undefined, ['x']), false)

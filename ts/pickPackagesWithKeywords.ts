@@ -1,4 +1,4 @@
-import { hasAllKeywords } from './hasAllKeywords';
+import { hasAllKeywords } from './hasAllKeywords.js';
 
 export function pickPackagesWithKeywords(packageInfos: Record<string, any>[], keywords: string[], fields?: string[]) {
   const pkgs = packageInfos.filter(pkg => hasAllKeywords(pkg.keywords, keywords))

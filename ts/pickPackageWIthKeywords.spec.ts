@@ -1,4 +1,4 @@
-import { pickPackagesWithKeywords } from './pickPackagesWithKeywords';
+import { pickPackagesWithKeywords } from './pickPackagesWithKeywords.js';
 
 test('empty package info list returns empty list', () => {
   expect(pickPackagesWithKeywords([], ['x'])).toEqual([])
