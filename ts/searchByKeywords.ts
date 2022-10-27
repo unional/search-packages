@@ -1,19 +1,11 @@
-import cp from 'child_process';
-import { pickPackagesWithKeywords } from './pickPackagesWithKeywords.js';
+import { execa } from 'execa'
+import { pickPackagesWithKeywords } from './pickPackagesWithKeywords.js'
 
 export function searchByKeywords(keywords: string[]): Promise<string[]>
 export function searchByKeywords(keywords: string[], fields: string[]): Promise<Record<string, any> & { name: string }[]>
 // istanbul ignore next
-export function searchByKeywords(keywords: string[], fields?: string[]) {
-  return new Promise((a, r) => {
-    cp.exec(`npm search --json --no-description ${keywords.join(' ')}`, (err, stdout) => {
-      if (err) {
-        r(err)
-      }
-      else {
-        const json = JSON.parse(stdout)
-        a(pickPackagesWithKeywords(json, keywords, fields))
-      }
-    })
-  })
+export async function searchByKeywords(keywords: string[], fields?: string[]) {
+  const { stdout } = await execa(`npm`, ['search', '--json', '--no-description', ...keywords])
+  const json = JSON.parse(stdout)
+  return pickPackagesWithKeywords(json, keywords, fields)
 }
