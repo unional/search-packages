@@ -1,5 +1,5 @@
 import cp from 'child_process';
-import { pickPackagesWithKeywords } from './pickPackagesWithKeywords';
+import { pickPackagesWithKeywords } from './pickPackagesWithKeywords.js';
 
 export function searchByKeywords(keywords: string[]): Promise<string[]>
 export function searchByKeywords(keywords: string[], fields: string[]): Promise<Record<string, any> & { name: string }[]>

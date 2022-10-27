@@ -16,6 +16,6 @@
     "typings"
   ],
   "files": [
-    "src/index.ts"
+    "ts/index.ts"
   ]
 }
