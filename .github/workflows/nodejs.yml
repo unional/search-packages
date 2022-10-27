@@ -35,12 +35,12 @@ jobs:
       - run: yarn build
       - run: yarn depcheck
       - name: upload lib folder
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v3
         with:
           name: lib
           path: lib
       - name: upload libm folder
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v3
         with:
           name: libm
           path: libm
