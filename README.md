@@ -3,7 +3,7 @@
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
 
-[![GitHub NodeJS][github-release]][github-action-url]
+[![GitHub Action][github-release]][github-action-url]
 [![Codecov][codecov-image]][codecov-url]
 
 [![Visual Studio Code][vscode-image]][vscode-url]
