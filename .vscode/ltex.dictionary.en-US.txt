@@ -1,1 +1,7 @@
 Codecov
+
+npm-url
+downloads-url
+github-action-url
+codecov-url
+vscode-url

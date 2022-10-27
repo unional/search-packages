@@ -3,12 +3,12 @@
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
 
-[![GitHub NodeJS][github-nodejs]][github-action-url]
+[![GitHub NodeJS][github-release]][github-action-url]
 [![Codecov][codecov-image]][codecov-url]
 
 [![Visual Studio Code][vscode-image]][vscode-url]
 
-Search packages on npm.
+Search packages on NPM.
 
 ## Usage
 
@@ -47,8 +47,8 @@ git push
 [codecov-url]: https://codecov.io/gh/unional/search-packages
 [downloads-image]: https://img.shields.io/npm/dm/search-packages.svg?style=flat
 [downloads-url]: https://npmjs.org/package/search-packages
-[github-nodejs]: https://github.com/unional/search-packages/workflows/nodejs/badge.svg
 [github-action-url]: https://github.com/unional/search-packages/actions
+[github-release]: https://github.com/unional/search-packages/workflows/release/badge.svg
 [npm-image]: https://img.shields.io/npm/v/search-packages.svg?style=flat
 [npm-url]: https://npmjs.org/package/search-packages
 [vscode-image]: https://img.shields.io/badge/vscode-ready-green.svg
