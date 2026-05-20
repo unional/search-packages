@@ -1,3 +1,14 @@
 {
-  "ignores": ["rimraf"]
+	"ignores": [
+		"@commitlint/cli",
+		"@commitlint/config-conventional",
+		"@types/jest",
+		"@typescript-eslint/parser",
+		"jest-validate",
+		"jest-watch-suspend",
+		"jest-watch-toggle-config",
+		"jest-watch-typeahead",
+		"rimraf",
+		"ts-jest"
+	]
 }
