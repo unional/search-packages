@@ -2,6 +2,13 @@ name: pull-request
 on:
   pull_request:
     types: [opened, synchronize]
+  # The changesets "Version Packages" PR is opened with GITHUB_TOKEN, and GitHub
+  # deliberately does not fire `pull_request` for those — so it would otherwise carry no
+  # checks and could never satisfy the required `code / all-checks` rule. Running on push
+  # to the release branch attaches the same check to the same commit, which is what branch
+  # protection actually evaluates.
+  push:
+    branches: ['changeset-release/**']
 
 jobs:
   code:
