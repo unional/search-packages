@@ -1,87 +1,36 @@
 {
-  "name": "search-packages",
-  "version": "2.1.0",
-  "description": "Search packages on npm",
-  "homepage": "https://github.com/unional/search-packages",
-  "bugs": {
-    "url": "https://github.com/unional/search-packages/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/unional/search-packages.git"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "Homa Wong (unional)",
-    "email": "homawong@gmail.com"
-  },
-  "sideEffects": false,
-  "type": "module",
-  "exports": {
-    "import": "./esm/index.js",
-    "require": "./cjs/index.js",
-    "default": "./esm/index.js"
-  },
-  "main": "./cjs/index.js",
-  "types": "./esm/index.d.ts",
-  "files": [
-    "cjs",
-    "esm",
-    "ts",
-    "!ts/**/*.spec.ts"
-  ],
-  "scripts": {
-    "build": "run-p build:cjs build:esm",
-    "build:cjs": "tsc -p tsconfig.cjs.json && ncp package.cjs.json cjs/package.json",
-    "build:esm": "tsc -p tsconfig.esm.json",
-    "clean": "rimraf coverage cjs esm lib libm || true",
-    "coverage": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
-    "cs": "changeset",
-    "depcheck": "depcheck",
-    "lint": "eslint --ext=ts,js .",
-    "nuke": "run-s clean nuke:local",
-    "nuke:local": "rimraf node_modules || true",
-    "postinstall": "husky install",
-    "prepack": "pinst --disable",
-    "postpack": "pinst --enable",
-    "release": "pnpm cs publish",
-    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
-    "verify": "npm-run-all clean -p build depcheck lint coverage",
-    "version": "pnpm cs version",
-    "watch": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --watch",
-    "watch:type": "tsc --watch"
-  },
-  "devDependencies": {
-    "@changesets/cli": "^2.25.0",
-    "@commitlint/cli": "^21.0.0",
-    "@commitlint/config-conventional": "^21.0.0",
-    "@types/jest": "^29.2.0",
-    "@types/node": "^18.0.0",
-    "@typescript-eslint/eslint-plugin": "^8.0.0",
-    "@typescript-eslint/parser": "^8.0.0",
-    "cross-env": "^7.0.3",
-    "depcheck": "^1.4.3",
-    "eslint": "^8.26.0",
-    "eslint-config-prettier": "^10.0.0",
-    "eslint-plugin-harmony": "^7.1.0",
-    "husky": "^9.0.0",
-    "jest": "^29.2.2",
-    "jest-validate": "^29.2.2",
-    "jest-watch-suspend": "^1.1.2",
-    "jest-watch-toggle-config": "^3.0.0",
-    "jest-watch-typeahead": "^3.0.0",
-    "ncp": "^2.0.0",
-    "npm-run-all2": "^9.0.0",
-    "pinst": "^3.0.0",
-    "rimraf": "^6.0.0",
-    "ts-jest": "^29.0.3",
-    "typescript": "^5.0.0"
-  },
-  "packageManager": "pnpm@11.20.0",
-  "engines": {
-    "node": ">=14"
-  },
-  "dependencies": {
-    "execa": "^10.0.0"
-  }
+	"private": true,
+	"scripts": {
+		"build": "turbo run build",
+		"check": "biome check",
+		"check:fix": "biome check --fix",
+		"clean": "turbo run clean",
+		"coverage": "turbo run coverage",
+		"cs": "changeset",
+		"depcheck": "turbo run depcheck",
+		"format": "biome format . --write",
+		"lint": "biome lint .",
+		"nuke": "turbo run nuke && pnpm nuke:local",
+		"nuke:local": "rimraf node_modules",
+		"prepare": "husky",
+		"release": "changeset publish",
+		"sp": "pnpm --filter search-packages",
+		"test": "turbo run test",
+		"verify": "run-p lint verify:pkg",
+		"verify:pkg": "turbo run build coverage depcheck",
+		"version": "changeset version"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.5.2",
+		"@changesets/cli": "^2.31.0",
+		"@commitlint/cli": "^21.0.0",
+		"@commitlint/config-conventional": "^21.0.0",
+		"@repobuddy/biome": "^2.3.1",
+		"@types/node": "^24.12.2",
+		"husky": "^9.1.7",
+		"npm-run-all2": "^9.0.0",
+		"rimraf": "^6.0.1",
+		"turbo": "^2.10.3"
+	},
+	"packageManager": "pnpm@11.20.0"
 }

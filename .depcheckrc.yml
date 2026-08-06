@@ -1,7 +1,0 @@
-ignores:
-  - '@commitlint/*'
-  - '@size-limit/*'
-  - '@types/*'
-  - '@typescript-eslint/parser'
-  - jest-*
-  - ts-jest
