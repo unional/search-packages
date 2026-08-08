@@ -15,3 +15,5 @@ pnpm verify   # lint + build + coverage + depcheck
 
 Releases are cut by [changesets](https://github.com/changesets/changesets) from GitHub Actions.
 Add a changeset with `pnpm cs` in any PR that changes a published package.
+
+<!-- queue validation B -->
