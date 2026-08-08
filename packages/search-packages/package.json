@@ -8,13 +8,13 @@
 		"registry",
 		"search"
 	],
-	"homepage": "https://github.com/unional/search-packages",
+	"homepage": "https://github.com/cyberuni/search-packages",
 	"bugs": {
-		"url": "https://github.com/unional/search-packages/issues"
+		"url": "https://github.com/cyberuni/search-packages/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/unional/search-packages.git"
+		"url": "https://github.com/cyberuni/search-packages.git"
 	},
 	"license": "MIT",
 	"author": {
