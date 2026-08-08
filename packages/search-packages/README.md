@@ -83,12 +83,12 @@ git push
 # create PR
 ```
 
-[codecov-image]: https://codecov.io/gh/unional/search-packages/branch/master/graph/badge.svg
-[codecov-url]: https://codecov.io/gh/unional/search-packages
+[codecov-image]: https://codecov.io/gh/cyberuni/search-packages/branch/main/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/cyberuni/search-packages
 [downloads-image]: https://img.shields.io/npm/dm/search-packages.svg?style=flat
 [downloads-url]: https://npmjs.org/package/search-packages
-[github-action-url]: https://github.com/unional/search-packages/actions
-[github-release]: https://github.com/unional/search-packages/workflows/release/badge.svg
+[github-action-url]: https://github.com/cyberuni/search-packages/actions
+[github-release]: https://github.com/cyberuni/search-packages/workflows/release/badge.svg
 [npm-image]: https://img.shields.io/npm/v/search-packages.svg?style=flat
 [npm-url]: https://npmjs.org/package/search-packages
 [registry-api]: https://github.com/npm/registry/blob/master/docs/REGISTRY-API.md#get-v1search
