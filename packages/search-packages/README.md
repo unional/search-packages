@@ -95,4 +95,3 @@ git push
 [vscode-image]: https://img.shields.io/badge/vscode-ready-green.svg
 [vscode-url]: https://code.visualstudio.com/
 
-<!-- queue validation A -->
