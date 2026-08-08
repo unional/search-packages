@@ -94,3 +94,5 @@ git push
 [registry-api]: https://github.com/npm/registry/blob/master/docs/REGISTRY-API.md#get-v1search
 [vscode-image]: https://img.shields.io/badge/vscode-ready-green.svg
 [vscode-url]: https://code.visualstudio.com/
+
+<!-- queue validation A -->
